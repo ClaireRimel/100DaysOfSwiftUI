@@ -12,9 +12,9 @@
     
     @State private var checkAmount = ""
     @State private var numberOfPeople = ""
-    @State private var tipPercentage = 2
+    @State private var tipPercentage = 3
     
-    let tipPercentages = [10, 15, 20, 25, 0 ]
+    let tipPercentages = [10, 15, 20, 25, 0]
     
     var totalAmontWithTip: Double {
         let tipSelection = Double(tipPercentages[tipPercentage])
