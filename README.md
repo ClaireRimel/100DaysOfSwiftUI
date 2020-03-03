@@ -3,7 +3,7 @@
 
 ## WeSplit
 
-First project is an introduction to the basic concept of SwiftUI. We learn how creating form, addition of the NavigationBar, creating views in loop, handling of pickers, among others.
+First project is an introduction to the basic concept of SwiftUI. We learn how to create form, add NavigationBar, create views in loop, handle pickers, among others.
 
 
 ## LengthConversion
