@@ -34,15 +34,38 @@ struct ContentView: View {
                 
                 ForEach(0..<3) { number in
                     Button(action: {
-                        
+                        self.flagTapped(number)
                     }) {
                         Image(self.countries[number])
                             .renderingMode(.original)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
+                            .shadow(color: .black, radius: 2)
                     }
                 }
                 Spacer()
             }
         }
+        .alert(isPresented: $showingScore){
+            Alert(title: Text(scoreTitle), message: Text("Your score is \(score)"), dismissButton: .default(Text("OK")) {
+                self.askQuestion()
+            })
+        }
+    }
+    
+    func flagTapped(_ number: Int) {
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+            score += 1
+        } else {
+            scoreTitle = "Wrong! That’s the flag of \(countries[number]) "
+        }
+        showingScore = true
+    }
+    
+    func askQuestion() {
+        countries.shuffle ()
+        correctAnswer = Int.random(in: 0...2)
     }
 }
 
