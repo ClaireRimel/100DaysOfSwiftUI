@@ -61,6 +61,7 @@
                 
                 Section(header: Text("Amount plus tip value")) {
                     Text("\(totalAmontWithTip, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == 4 ? .red : .black)
                 }
                 
                 Section(header: Text("Amount per perso")) {
