@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  ViewsAndModifiers
+//  Milestone
 //
-//  Created by Claire on 11/03/2020.
+//  Created by Claire on 14/04/2020.
 //  Copyright © 2020 Claire Sivadier. All rights reserved.
 //
 
