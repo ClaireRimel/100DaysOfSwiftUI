@@ -54,51 +54,53 @@ struct ContentView: View {
         case ("Rock", "Scissors"):
             score += 1
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
-            You win🏆, Rock crushes scissors!
+            The cumputer chose \(computerChoice)!
+            Rock crushes scissors!
+            You win🏆!
             """
             return scoreTitle
         case ("Scissors", "Paper"):
             score += 1
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
-            You win🏆! Scissors cuts paper!
+            The cumputer chose \(computerChoice)!
+            Scissors cuts paper!
+            You win🏆!
             """
             return scoreTitle
         case ("Paper", "Rock"):
             score += 1
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
-            You win🏆! Paper covers rock!
+            The cumputer chose \(computerChoice)!
+            Paper covers rock!
+            You win🏆!
             """
             return scoreTitle
         case ("Scissors", "Rock"):
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
+            The cumputer chose \(computerChoice)!
             You loose 🥺, rock crushes scissors...
             """
             return scoreTitle
         case ("Paper", "Scissors"):
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
+            The cumputer chose \(computerChoice)!
             You loose 🥺, scissors cuts paper...
             """
             return scoreTitle
         case ("Rock", "Paper"):
             scoreTitle = """
-            The cumputer choose \(computerChoice)!
+            The cumputer chose \(computerChoice)!
             You loose 🥺, paper covers rock...
             """
             return scoreTitle
         default:
             scoreTitle = """
             TIE 😬
-            The cumputer choose \(computerChoice)!
+            The cumputer chose \(computerChoice)!
             """
             return scoreTitle
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
