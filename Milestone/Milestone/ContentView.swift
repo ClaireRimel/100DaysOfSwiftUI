@@ -22,7 +22,7 @@ struct ContentView: View {
             Color.init(red: 15/255, green: 66/255, blue: 100/255)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 30){
+            VStack(spacing: 40){
                 VStack {
                     Text("Choose your Destiny")
                         .foregroundColor(.white)
@@ -31,10 +31,11 @@ struct ContentView: View {
                 }
                 
                 ForEach(0..<self.roShamBo.count) { element in
-                    Button( "Element", action: {
+                    Button(action: {
                         self.scoreTitle =  self.elementTapped(playerChoice: self.roShamBo[element], computerChoice: self.roShamBo[self.computerChoice])
-                    })
-                    
+                    }) {
+                        ElementsImage(image: self.roShamBo[element])
+                    }
                 }
                 Spacer()
             }
