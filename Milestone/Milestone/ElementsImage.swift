@@ -16,7 +16,7 @@ struct ElementsImage: View {
         
         Image(image)
             .renderingMode(.original)
-        .resizable()
+            .resizable()
             .frame(width: 100)
             .aspectRatio(contentMode: .fit)
     }
