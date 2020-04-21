@@ -31,6 +31,7 @@ struct ContentView: View {
                         .frame(minWidth: 0, maxWidth: .infinity)
                 }
                 
+                HStack(spacing: 30) {
                 ForEach(0..<self.roShamBo.count) { element in
                     Button(action: {
                         
@@ -43,7 +44,8 @@ struct ContentView: View {
                         }
                         })
                         {
-                        ElementsImage(image: self.roShamBo[element])
+                            ElementsImage(image: self.roShamBo[element])
+                    }
                     }
                 }
                 
@@ -53,8 +55,8 @@ struct ContentView: View {
                                        .frame(minWidth: 0, maxWidth: .infinity)
                 Spacer()
             }
-        }
             
+        }
         .alert(isPresented: $showingScore){
             Alert(title: Text(scoreTitle), message: Text("Your score is \(score)"), dismissButton: .default(Text("OK")) {
                 
